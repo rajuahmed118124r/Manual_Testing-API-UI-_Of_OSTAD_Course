@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "6fae4cf1-836f-41a9-8a3d-33d2843cb505",
+		"name": "Assignment Of SQA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48358024"
+	},
+	"item": [
+		{
+			"name": "Search_Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bse_url}}/search?keyword=Nike+react1",
+					"host": [
+						"{{bse_url}}"
+					],
+					"path": [
+						"",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Nike+react1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View_Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bse_url}}/nike-react-infinity-run-flyknit-171",
+					"host": [
+						"{{bse_url}}"
+					],
+					"path": [
+						"nike-react-infinity-run-flyknit-171"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cart_Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sku\": \"NJC44141-Black-L\",\r\n  \"qty\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bse_url}}/api/cart/mine/items",
+					"host": [
+						"{{bse_url}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"mine",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shopping_Cart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bse_url}}/cart",
+					"host": [
+						"{{bse_url}}"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show the item(extra)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demositefiles.blob.core.windows.net/images/catalog/9320/5861/plv1929-Green-thumb.png",
+					"protocol": "https",
+					"host": [
+						"demositefiles",
+						"blob",
+						"core",
+						"windows",
+						"net"
+					],
+					"path": [
+						"images",
+						"catalog",
+						"9320",
+						"5861",
+						"plv1929-Green-thumb.png"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "bse_url",
+			"value": ""
+		}
+	]
+}
